@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Basp",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.basp",
+					"match": "\\b(if|else|elif|fn|return|continue|break|for|while|in|new|import|from|as)\\b"
+				}
+			]
+		},
+		"string": {
+			"name": "string.quoted.double.basp",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.basp",
+					"match": "\\\\."
+				}
+			]
+		},
+		"number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.basp",
+					"match": "\\b([+-]?[0-9]+(\\.?[0-9]+)?)\\b"
+				}
+			]
+		},
+		"boolean": {
+			"patterns": [
+				{
+					"name": "constant.numeric.basp",
+					"match": "\\b(True|False)\\b"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"name": "storage.basp",
+					"match": "\\b(int|string|bool|array|enum|null|struct)\\b"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.basp",
+					"match": "\\b(\/\/?(.+))\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.basp"
+}

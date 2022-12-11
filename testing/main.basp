@@ -1,0 +1,10 @@
+import add, sub, mul, div, pow from "/Users/ben/Code/Projects/Basp/testing/math.basp"
+
+int num1 = 10
+int num2 = 10
+
+Print(add(num1, num2))
+Print(sub(num1, num2))
+Print(mul(num1, num2))
+Print(div(num1, num2))
+Print(pow(num1, num2))

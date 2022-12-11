@@ -1,0 +1,30 @@
+fn printData(data): null {
+    Print(Typeof(data) + ": " + String(data))
+}
+
+int numberExample = 5
+string stringExample = "Hello World"
+bool booleanExample = True
+array arrayExample = ["element 1", 2, ["array 3"], { AnEnum }]
+enum enumExample = { Monday, Tuesday }
+
+struct Structure {
+    property: int
+}
+
+Structure structure = new Structure(100)
+
+array allDatatypes = [
+    numberExample,
+    stringExample,
+    booleanExample,
+    arrayExample,
+    enumExample,
+    enumExample.Monday,
+    printData,
+    structure
+]
+
+for (data in allDatatypes) {
+    printData(data)
+}

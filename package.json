@@ -1,0 +1,13 @@
+{
+  "name": "basp",
+  "version": "1.0.0",
+  "description": "my programming language",
+  "main": "main.js",
+  "scripts": {
+    "go": "node src/launcher.js",
+    "build": "pkg --output exe/main.exe src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

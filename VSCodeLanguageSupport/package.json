@@ -1,0 +1,25 @@
+{
+  "name": "basp-language-support",
+  "displayName": "Basp Language Support",
+  "description": "Get syntax highlighting for .basp files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "basp",
+      "aliases": ["Basp", "basp"],
+      "extensions": [".basp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "basp",
+      "scopeName": "source.basp",
+      "path": "./syntaxes/basp.tmLanguage.json"
+    }]
+  }
+}
